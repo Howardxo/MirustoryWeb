@@ -40,7 +40,7 @@ onUnmounted(() => {
       <nav class="navbar">
         <div class="logo">
           <a href="#" @click.prevent="navigateTo('top')">
-            <span class="logo-text">MapleStory</span>
+            <span class="logo-text">MiruStory</span>
           </a>
         </div>
         
@@ -54,16 +54,16 @@ onUnmounted(() => {
         
         <ul :class="['nav-menu', { 'active': isMenuOpen }]">
           <li class="nav-item">
-            <a href="#introduction" @click.prevent="navigateTo('introduction')">Introduction</a>
+            <a href="#introduction" @click.prevent="navigateTo('introduction')">介紹</a>
           </li>
           <li class="nav-item">
-            <a href="#system" @click.prevent="navigateTo('system')">Game System</a>
+            <a href="#system" @click.prevent="navigateTo('system')">遊戲設置</a>
           </li>
           <li class="nav-item">
-            <a href="#strategy" @click.prevent="navigateTo('strategy')">Strategy</a>
+            <a href="#strategy" @click.prevent="navigateTo('strategy')">攻略</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="btn btn-primary">Play Now</a>
+            <a href="#" class="btn btn-primary">開始玩</a>
           </li>
         </ul>
       </nav>
@@ -100,31 +100,33 @@ onUnmounted(() => {
   z-index: var(--z-20);
 }
 
+/* LOGO字體顏色: 頂部白色，滑動後變主色 */
 .logo-text {
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: var(--font-size-xl);
-  color: var(--color-primary-500);
+  color: #fff;
   transition: color var(--transition-normal) var(--transition-function);
 }
-
 .site-header.scrolled .logo-text {
   color: var(--color-primary-600);
 }
 
+/* 導覽選單字體顏色: 頂部白色，滑動後變深色 */
 .nav-menu {
   display: flex;
   align-items: center;
   list-style: none;
   gap: var(--space-8);
 }
-
 .nav-item a {
   font-weight: 600;
-  color: var(--color-neutral-800);
+  color: #fff;
   transition: color var(--transition-normal) var(--transition-function);
 }
-
+.site-header.scrolled .nav-item a {
+  color: var(--color-neutral-800);
+}
 .nav-item a:hover {
   color: var(--color-primary-500);
 }
@@ -142,23 +144,22 @@ onUnmounted(() => {
   height: 18px;
   cursor: pointer;
 }
-
 .hamburger span {
   display: block;
   height: 2px;
   width: 100%;
-  background-color: var(--color-neutral-800);
+  background-color: #fff;
   transition: all 0.3s ease;
 }
-
+.site-header.scrolled .hamburger span {
+  background-color: var(--color-neutral-800);
+}
 .hamburger.active span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
-
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.active span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
@@ -167,7 +168,6 @@ onUnmounted(() => {
   .menu-toggle {
     display: block;
   }
-  
   .nav-menu {
     position: fixed;
     top: 0;
@@ -181,19 +181,27 @@ onUnmounted(() => {
     transition: right 0.3s ease;
     box-shadow: var(--shadow-xl);
   }
-  
   .nav-menu.active {
     right: 0;
   }
-  
   .nav-item {
     width: 100%;
     text-align: center;
   }
-  
   .nav-item a.btn {
     width: 100%;
     margin-top: var(--space-4);
+  }
+  /* 手機選單內的字體顏色調整 */
+  .nav-menu {
+    background: #fff;
+  }
+  .nav-menu .nav-item a {
+    color: var(--color-neutral-800);
+  }
+  .nav-menu .nav-item a.btn {
+    color: #fff;
+    background: var(--color-primary-500);
   }
 }
 </style>

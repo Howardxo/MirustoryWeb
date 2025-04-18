@@ -3,31 +3,31 @@ import { onMounted, ref } from 'vue'
 
 const heroRef = ref<HTMLElement | null>(null)
 
-// Simple particle animation system
+// 粒子動畫系統（保持不變）
 const createParticles = () => {
   if (!heroRef.value) return
-  
+
   const heroElement = heroRef.value
   const particleCount = 50
-  
+
   for (let i = 0; i < particleCount; i++) {
     const particle = document.createElement('div')
     particle.classList.add('particle')
-    
-    // Randomize particle properties
+
+    // 隨機化粒子屬性
     const size = Math.random() * 10 + 5
     const posX = Math.random() * 100
     const posY = Math.random() * 100
     const duration = Math.random() * 20 + 10
     const delay = Math.random() * 5
-    
+
     particle.style.width = `${size}px`
     particle.style.height = `${size}px`
     particle.style.left = `${posX}%`
     particle.style.top = `${posY}%`
     particle.style.animationDuration = `${duration}s`
     particle.style.animationDelay = `${delay}s`
-    
+
     heroElement.appendChild(particle)
   }
 }
@@ -38,31 +38,37 @@ onMounted(() => {
 </script>
 
 <template>
+  <div class="header-spacer"></div>
   <section class="hero-section" ref="heroRef">
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-title">
-          Begin Your Epic Adventure in MapleStory
-        </h1>
-        <p class="hero-subtitle">
-          Explore the magical world of Maple, battle fierce monsters, and forge legendary friendships
-        </p>
-        <div class="hero-cta">
-          <a href="#" class="btn btn-primary">Download Now</a>
-          <a href="#introduction" class="btn btn-outline">Learn More</a>
-        </div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Begin Your Epic Adventure in MapleStory
+      </h1>
+      <p class="hero-subtitle">
+        Explore the magical world of Maple, battle fierce monsters, and forge legendary friendships
+      </p>
+      <div class="hero-cta">
+        <a href="#" class="btn btn-primary">Download Now</a>
+        <a href="#introduction" class="btn btn-outline">Learn More</a>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
+.header-spacer {
+  height: 80px;
+}
+
 .hero-section {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
-  display: flex;
-  align-items: center;
+  height: calc(100vh - 80px);
+  min-height: calc(600px - 80px);
+  width: 100vw;
+  margin-top: -80px;
+  padding-top: 80px;
+  display: grid;
+  place-items: center;
   background: linear-gradient(135deg, var(--color-primary-900), var(--color-secondary-900));
   background-size: cover;
   background-position: center;
@@ -77,7 +83,7 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+  background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
   background-size: cover;
   background-position: center;
   opacity: 0.4;
@@ -86,57 +92,42 @@ onMounted(() => {
 
 .hero-content {
   position: relative;
-  z-index: 2;
-  max-width: 800px;
-  text-align: center;
+  z-index: 3;
+  width: min(90vw, 800px);
   margin: 0 auto;
-  padding: var(--space-8);
-}
-
-.hero-title {
-  font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-6xl));
-  margin-bottom: var(--space-6);
-  color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  animation: fadeInUp 1s ease-out;
-}
-
-.hero-subtitle {
-  font-size: clamp(var(--font-size-lg), 2vw, var(--font-size-2xl));
-  margin-bottom: var(--space-8);
-  color: var(--color-neutral-100);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  animation: fadeInUp 1s ease-out 0.2s both;
-}
-
-.hero-cta {
+  text-align: center;
   display: flex;
-  gap: var(--space-4);
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  animation: fadeInUp 1s ease-out 0.4s both;
+  transform: translateY(5%);
+  padding: 2rem 0;
 }
 
-@media (max-width: 640px) {
-  .hero-cta {
-    flex-direction: column;
-    gap: var(--space-4);
-    width: 100%;
+/* 保持原有 hero-title、hero-subtitle、hero-cta 樣式 */
+
+@media (max-width: 768px) {
+  .header-spacer {
+    height: 60px;
   }
-  
-  .hero-cta .btn {
-    width: 100%;
+  .hero-section {
+    height: calc(100vh - 60px);
+    min-height: calc(600px - 60px);
+    margin-top: -60px;
+    padding-top: 60px;
+  }
+  .hero-content {
+    transform: translateY(0);
   }
 }
 
-/* Particles */
 .particle {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   pointer-events: none;
   opacity: 0;
+  z-index: 2;
   animation: float infinite linear both;
 }
 

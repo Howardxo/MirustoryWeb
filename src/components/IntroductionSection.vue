@@ -8,27 +8,24 @@ defineProps<{
   <section :id="id" class="introduction-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Welcome to the World of MapleStory</h2>
-        <p class="section-subtitle">Discover a vibrant and enchanting universe filled with adventure</p>
+        <h2 class="section-title">歡迎來到新楓之谷的奇幻世界</h2>
+        <p class="section-subtitle">展開屬於你的冒險旅程，探索多采多姿的楓之谷宇宙</p>
       </div>
       
       <div class="intro-content">
         <div class="intro-image">
-          <img src="https://via.placeholder.com/600x400?text=MapleStory+World" alt="MapleStory World" class="rounded shadow-lg" />
+          <img src="https://via.placeholder.com/600x400?text=MapleStory+World" alt="新楓之谷世界" class="rounded shadow-lg" />
         </div>
         
         <div class="intro-text">
-          <h3>A Magical Journey Awaits</h3>
+          <h3>魔法冒險，即刻啟程</h3>
           <p>
-            MapleStory is a free-to-play, 2D, side-scrolling MMORPG set in a vibrant fantasy world. Since its launch in 2003, 
-            this beloved game has captured the hearts of millions with its charming pixel art, engaging gameplay, and rich storyline.
+            新楓之谷是一款免費遊玩的2D橫向卷軸大型多人線上角色扮演遊戲，自2003年推出以來，以可愛像素畫風、豐富劇情與多元玩法，深受全球玩家喜愛[1][3]。
           </p>
           
-          <h3>The Story of Maple World</h3>
+          <h3>楓之谷的故事</h3>
           <p>
-            Long ago, the peaceful world of Maple was threatened by the Black Mage, a dark wizard with immense power. 
-            Five heroes rose to challenge him, but were ultimately defeated and sealed away in ice. 
-            Centuries later, you embark on your own adventure in a world still recovering from the Black Mage's influence.
+            很久以前，強大的黑魔法師威脅著楓之谷的和平。五位英雄挺身對抗，雖然最終失敗卻將黑魔法師封印於冰中。數百年後，你將成為新一代冒險者，踏上拯救世界的旅程[1][3]。
           </p>
           
           <div class="intro-features">
@@ -39,8 +36,8 @@ defineProps<{
                 </svg>
               </div>
               <div class="feature-content">
-                <h4>Vast World</h4>
-                <p>Explore diverse continents, each with unique landscapes and challenges</p>
+                <h4>廣闊世界</h4>
+                <p>探索各具特色的地區與地圖，從福爾摩沙、西門町到未來東京，冒險無窮[1][3]。</p>
               </div>
             </div>
             
@@ -51,8 +48,8 @@ defineProps<{
                 </svg>
               </div>
               <div class="feature-content">
-                <h4>Social Experience</h4>
-                <p>Join guilds, make friends, and tackle challenges together</p>
+                <h4>社群互動</h4>
+                <p>加入公會、結交夥伴，一同挑戰強敵與副本，享受團隊合作的樂趣[2]。</p>
               </div>
             </div>
             
@@ -63,8 +60,8 @@ defineProps<{
                 </svg>
               </div>
               <div class="feature-content">
-                <h4>Constant Evolution</h4>
-                <p>Regular updates with new content, classes, and events</p>
+                <h4>持續進化</h4>
+                <p>定期推出全新職業、活動與內容，冒險永不止步[2]。</p>
               </div>
             </div>
           </div>
