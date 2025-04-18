@@ -1,0 +1,145 @@
+:root {
+  /* Color System */
+  --color-primary-50: #EBF5FF;
+  --color-primary-100: #CCE5FF;
+  --color-primary-200: #99CCFF;
+  --color-primary-300: #66B2FF;
+  --color-primary-400: #4A90E2; /* Primary */
+  --color-primary-500: #3366CC;
+  --color-primary-600: #1A4DA6;
+  --color-primary-700: #003380;
+  --color-primary-800: #001F59;
+  --color-primary-900: #000A33;
+  
+  --color-secondary-50: #F5F0FF;
+  --color-secondary-100: #EBE3FF;
+  --color-secondary-200: #D6C6FF;
+  --color-secondary-300: #BDA8FF;
+  --color-secondary-400: #9C6ADE; /* Secondary */
+  --color-secondary-500: #8957E5;
+  --color-secondary-600: #6B40BF;
+  --color-secondary-700: #5A35A5;
+  --color-secondary-800: #472B80;
+  --color-secondary-900: #352159;
+  
+  --color-accent-50: #FFF5EB;
+  --color-accent-100: #FFE8D1;
+  --color-accent-200: #FFD1A3;
+  --color-accent-300: #FFBB75;
+  --color-accent-400: #FF9944; /* Accent */
+  --color-accent-500: #FF8800;
+  --color-accent-600: #CC6A00;
+  --color-accent-700: #994D00;
+  --color-accent-800: #663300;
+  --color-accent-900: #331A00;
+  
+  --color-success-50: #E6F7EF;
+  --color-success-100: #C2ECD8;
+  --color-success-200: #9FE1C1;
+  --color-success-300: #7BD5A9;
+  --color-success-400: #36B37E; /* Success */
+  --color-success-500: #2D995A;
+  --color-success-600: #237F42;
+  --color-success-700: #1A6634;
+  --color-success-800: #114C26;
+  --color-success-900: #083313;
+  
+  --color-warning-50: #FFF8E6;
+  --color-warning-100: #FFEFC2;
+  --color-warning-200: #FFE699;
+  --color-warning-300: #FFDD71;
+  --color-warning-400: #FFAB00; /* Warning */
+  --color-warning-500: #FF9900;
+  --color-warning-600: #CC7A00;
+  --color-warning-700: #995C00;
+  --color-warning-800: #663D00;
+  --color-warning-900: #331F00;
+  
+  --color-error-50: #FFEBE6;
+  --color-error-100: #FFD1C2;
+  --color-error-200: #FFB899;
+  --color-error-300: #FF9E71;
+  --color-error-400: #FF5630; /* Error */
+  --color-error-500: #DE350B;
+  --color-error-600: #BF2600;
+  --color-error-700: #991F00;
+  --color-error-800: #661400;
+  --color-error-900: #330A00;
+  
+  --color-neutral-50: #F7F9FC;
+  --color-neutral-100: #EDF2F7;
+  --color-neutral-200: #E2E8F0;
+  --color-neutral-300: #CBD5E0;
+  --color-neutral-400: #A0AEC0;
+  --color-neutral-500: #718096;
+  --color-neutral-600: #4A5568;
+  --color-neutral-700: #2D3748;
+  --color-neutral-800: #1A202C;
+  --color-neutral-900: #0F141E;
+  
+  /* Typography */
+  --font-heading: 'Nunito Sans', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem;  /* 36px */
+  --font-size-5xl: 3rem;     /* 48px */
+  --font-size-6xl: 3.75rem;  /* 60px */
+  
+  /* Spacing (8px system) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+  --space-32: 8rem;    /* 128px */
+  --space-40: 10rem;   /* 160px */
+  --space-48: 12rem;   /* 192px */
+  --space-56: 14rem;   /* 224px */
+  --space-64: 16rem;   /* 256px */
+  
+  /* Border Radius */
+  --radius-sm: 0.125rem;  /* 2px */
+  --radius-md: 0.25rem;   /* 4px */
+  --radius-lg: 0.5rem;    /* 8px */
+  --radius-xl: 0.75rem;   /* 12px */
+  --radius-2xl: 1rem;     /* 16px */
+  --radius-3xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Transitions */
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+  --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Z-index */
+  --z-0: 0;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  --z-auto: auto;
+}
